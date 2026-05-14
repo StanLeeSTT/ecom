@@ -1,0 +1,30 @@
+{
+  "name": "@legimi/auth",
+  "version": "0.1.0",
+  "description": "Authentication and authorization system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["auth", "authentication", "authorization", "jwt", "rbac"],
+  "author": "LEGIMI",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "tsx": "^4.0.0"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.1.1",
+    "bcrypt": "^5.1.1"
+  }
+}

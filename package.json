@@ -1,0 +1,25 @@
+{
+  "name": "legimi-commerce",
+  "version": "0.1.0",
+  "description": "AI-native commerce operating system",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter='./apps/*' --filter='./packages/*' --parallel run dev",
+    "build": "pnpm --filter='./packages/*' build && pnpm --filter='./apps/*' build",
+    "test": "pnpm --filter='./packages/*' --filter='./apps/*' test",
+    "lint": "pnpm --filter='./packages/*' --filter='./apps/*' lint",
+    "type-check": "pnpm --filter='./packages/*' --filter='./apps/*' type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

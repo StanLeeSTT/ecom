@@ -1,0 +1,20 @@
+{
+  "name": "@legimi/design-system",
+  "version": "0.1.0",
+  "description": "Design tokens and theming system",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": ["design", "tokens", "theme", "colors", "typography"],
+  "author": "LEGIMI",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {}
+}

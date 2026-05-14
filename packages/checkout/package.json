@@ -1,0 +1,24 @@
+{
+  "name": "@legimi/checkout",
+  "version": "0.1.0",
+  "description": "Checkout flow and cart management",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": ["checkout", "cart", "commerce"],
+  "author": "LEGIMI",
+  "license": "PROPRIETARY",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.22.4"
+  }
+}
