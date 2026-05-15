@@ -14,8 +14,9 @@ import { join } from 'path'
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      playground: true,
-      debug: true,
+      playground: process.env.NODE_ENV !== 'production',
+      debug: process.env.NODE_ENV !== 'production',
+      introspection: process.env.NODE_ENV !== 'production',
     }),
   ],
   controllers: [],
