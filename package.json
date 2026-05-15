@@ -5,13 +5,19 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter='./apps/*' --filter='./packages/*' --parallel run dev",
+    "dev": "pnpm --filter='./packages/*' install && pnpm --filter='./apps/*' --filter='./apps/*' --parallel run dev",
+    "dev:api": "pnpm --filter='./apps/api' run dev",
+    "dev:web": "pnpm --filter='./apps/web' run dev",
+    "dev:storefront": "pnpm --filter='./apps/storefront' run dev",
     "build": "pnpm --filter='./packages/*' build && pnpm --filter='./apps/*' build",
+    "build:deps": "pnpm --filter='./packages/*' build",
+    "build:apps": "pnpm --filter='./apps/*' build",
     "test": "pnpm --filter='./packages/*' --filter='./apps/*' test",
     "lint": "pnpm --filter='./packages/*' --filter='./apps/*' lint",
     "type-check": "pnpm --filter='./packages/*' --filter='./apps/*' type-check",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
-    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\""
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "perf:check": "bash scripts/performance-check.sh"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
